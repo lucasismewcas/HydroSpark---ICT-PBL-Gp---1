@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HydroSpark</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #eef4f8, #f8fbfd);
+  color: #0f172a;
+  padding-top: 60px;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(2,132,199,0.1);
+}
+
+nav h1 {
+  color: #0284c7;
+}
+
+nav ul {
+  display: flex;
+  gap: 22px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #475569;
+  font-size: 14px;
+  position: relative;
+}
+
+nav a:hover {
+  color: #0284c7;
+}
+
+/* HERO */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px;
+}
+
+.hero-text h2 {
+  font-size: 64px;
+  color: #0284c7;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  color: #475569;
+  margin-bottom: 25px;
+}
+
+.hero-text button {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0284c7, #38bdf8);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(2,132,199,0.25),
+    0 2px 6px rgba(0,0,0,0.08);
+
+  transition: all 0.3s ease;
+}
+
+.hero-text button:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 15px 35px rgba(2,132,199,0.35),
+    0 5px 12px rgba(0,0,0,0.1);
+}
+
+/* IMAGE SHADOW MAGIC */
+.hero img,
+.section img {
+  width: 360px;
+  border-radius: 16px;
+
+  /* smooth layered shadow */
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.12),
+    0 2px 8px rgba(0,0,0,0.06);
+
+  transition: all 0.35s ease;
+}
+
+.hero img:hover,
+.section img:hover {
+  transform: scale(1.05);
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.18),
+    0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* SECTIONS */
+.section {
+  width: 85%;
+  margin: 60px auto;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.08),
+    0 3px 10px rgba(0,0,0,0.05);
+
+  transition: all 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.12),
+    0 10px 20px rgba(0,0,0,0.08);
+}
+
+.section.reverse {
+  flex-direction: row-reverse;
+}
+
+.section h2 {
+  color: #0284c7;
+  margin-bottom: 10px;
+}
+
+.section p {
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  margin-top: 80px;
+  background: linear-gradient(135deg, #dbe7f0, #eef4f8);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .hero, .section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .hero-text h2 {
+    font-size: 42px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h1>HydroSpark</h1>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Our Project</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-text">
+    <h2>Clean Water → Clean Energy</h2>
+    <p>Transforming flowing water into renewable electricity for a smarter, greener future.</p>
+    <button>Explore</button>
+  </div>
+  <img src="Img/SustainableView.jpg">
+</section>
+
+<section class="section">
+  <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
+  <div>
+    <h2>Our Goal</h2>
+    <p>Our goal is to develop a sustainable and innovative energy system that uses water and renewable sources to generate electricity.</p>
+  </div>
+</section>
+
+<section class="section reverse">
+  <img src="Img/electrolyser.jpg">
+  <div>
+    <h2>How It Works</h2>
+    <p>Water flows through a turbine connected to a generator, converting motion into clean electricity efficiently.</p>
+  </div>
+</section>
+
+<section class="section">
+  <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png">
+  <div>
+    <h2>Contact</h2>
+    <p>Reach out to us to learn more about HydroSpark and how we can build a sustainable future together.</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 HydroSpark | All rights reserved
+</footer>
+
+</body>
+</html>
